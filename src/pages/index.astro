@@ -1,16 +1,47 @@
 ---
-
+import CreationsSection from "../components/CreationsSection.astro";
+import ExplainSection from "../components/ExplainSection.astro";
+import FooterSection from "../components/FooterSection.astro";
+import HeroSection from "../components/HeroSection.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="A landing page for LoopStudios, a challenge to CSS and HTML skills mainly by Frontend Mentor." />
+    <title>LoopStudios</title>
+
+    <meta property="og:title" content="LoopStudios" />
+    <meta
+      property="og:description"
+      content="A landing page for LoopStudios, a challenge to CSS and HTML skills mainly by Frontend Mentor."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="font-alata">
+    <main class="flex w-full flex-col gap-24 lg:gap-40">
+      <HeroSection />
+      <ExplainSection />
+      <CreationsSection />
+      <FooterSection />
+    </main>
+
+    <div class="w-full bg-black p-6 text-center text-15px text-white">
+      Challenge by <a href="https://frontendmentor.io">Frontend Mentor</a>. Made by <a href="https://frilly.dev/">Tsukimi</a>.
+    </div>
+  </body>
 </html>
+
+<style>
+  div a {
+    @apply text-purple-400 underline;
+  }
+</style>

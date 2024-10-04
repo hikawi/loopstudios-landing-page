@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/icons/logo.svg";
+import MenuButton from "./MenuButton.svelte";
+import MenuDropdown from "./MenuDropdown.svelte";
+---
+
+<section>
+  <nav class="flex w-full flex-row items-center justify-between">
+    <Image src={logo} alt="LoopStudios logo" class="z-20 h-6 w-36 object-contain lg:h-8 lg:w-48" />
+
+    <MenuButton client:load />
+    <MenuDropdown client:load />
+    <div class="hidden gap-8 text-15px text-white lg:flex">
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Careers</a>
+      <a class="nav-link" href="#">Events</a>
+      <a class="nav-link" href="#">Products</a>
+      <a class="nav-link" href="#">Support</a>
+    </div>
+  </nav>
+
+  <div
+    class="flex max-w-[40rem] items-center justify-start border-2 border-white p-6 font-josefin-sans text-3xl font-light uppercase leading-[0.95] text-white xs:text-[2.5rem] lg:p-10 lg:text-[4.5rem]"
+  >
+    <h1>Immersive experiences that deliver</h1>
+  </div>
+
+  <!-- Empty div -->
+  <div></div>
+</section>
+
+<style>
+  .nav-link {
+    @apply relative after:invisible after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-6 after:-translate-x-1/2 after:translate-y-4 after:bg-white after:outline-none after:content-[''] hover:after:visible;
+  }
+
+  section {
+    background-image: url("../assets/mobile/image-hero.jpg");
+    @apply flex h-[40.625rem] w-full flex-col justify-between bg-cover bg-center px-6 py-10 lg:py-16 xl:px-40;
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      background-image: url("../assets/desktop/image-hero.jpg");
+    }
+  }
+</style>

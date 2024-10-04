@@ -1,0 +1,23 @@
+---
+import CreationsView from "./CreationsView.svelte";
+---
+
+<section class="flex flex-col items-center gap-12 px-6 xl:px-40">
+  <div class="flex w-full flex-row justify-center lg:justify-between">
+    <h2 class="font-josefin-sans text-[2rem] font-light uppercase">Our creations</h2>
+
+    <!-- The button "See All" for desktop use. -->
+    <button
+      class="hidden h-10 w-40 border-[1px] border-black text-sm uppercase tracking-[0.3125rem] hover:bg-black hover:text-white lg:block"
+      >See All</button
+    >
+  </div>
+
+  <CreationsView />
+
+  <!-- The button "See All" for mobile use. -->
+  <button
+    class="-mt-4 block h-10 w-40 border-[1px] border-black text-sm uppercase tracking-[0.3125rem] hover:bg-black hover:text-white lg:hidden"
+    >See All</button
+  >
+</section>
