@@ -21,7 +21,7 @@ import MenuDropdown from "./MenuDropdown.svelte";
   </nav>
 
   <div
-    class="flex max-w-[40rem] items-center justify-start border-2 border-white p-6 font-josefin-sans text-3xl font-light uppercase leading-[0.95] text-white xs:text-[2.5rem] lg:p-10 lg:text-[4.5rem]"
+    class="z-10 flex max-w-[40rem] items-center justify-start border-2 border-white p-6 font-josefin-sans text-3xl font-light uppercase leading-[0.95] text-white xs:text-[2.5rem] lg:p-10 lg:text-[4.5rem]"
   >
     <h1>Immersive experiences that deliver</h1>
   </div>
@@ -37,7 +37,7 @@ import MenuDropdown from "./MenuDropdown.svelte";
 
   section {
     background-image: url("../assets/mobile/image-hero.jpg");
-    @apply flex h-[40.625rem] w-full flex-col justify-between bg-cover bg-center px-6 py-10 lg:py-16 xl:px-40;
+    @apply relative flex h-[40.625rem] w-full flex-col justify-between bg-cover bg-center px-6 py-10 before:absolute before:inset-0 before:z-0 before:bg-black before:bg-opacity-40 lg:py-16 xl:px-40;
   }
 
   @media (min-width: 1024px) {
